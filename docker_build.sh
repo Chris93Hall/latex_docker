@@ -1,3 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 
-docker build -t latex:latest .
+cd "$(dirname "$0")"
+docker build -t latex:latest "$@" .
